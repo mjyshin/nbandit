@@ -90,13 +90,13 @@ function main()
     t = 1:T
 
     # Plot average rewards
-    plt1 = plot(t,avg_reward1, xlabel="Plays", ylabel="Average reward")
-    plt1 = plot!(t,avg_reward2)
+    plt1 = plot(t,avg_reward1, xlabel="Plays", ylabel="Average reward", label="ϵ = 0.1")
+    plt1 = plot!(t,avg_reward2, label="ϵ = 0.01")
     display(plt1)
 
     # Plot optimal percentages
-    plt2 = plot(t,perc_opt1, xlabel="Plays", ylabel="% Optimal action")
-    plt2 = plot!(t,perc_opt2)
+    plt2 = plot(t,perc_opt1, xlabel="Plays", ylabel="% Optimal action", label="ϵ = 0.1")
+    plt2 = plot!(t,perc_opt2, label="ϵ = 0.01")
     display(plt2)
 end
 
